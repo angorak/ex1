@@ -1,0 +1,13 @@
+{
+    "name": "hosek/ex1",
+    "autoload": {
+        "psr-4": {
+            "Hosek\\": "src/"
+        }
+    },
+    "authors": [{
+        "name": "Tomáš Hošek",
+        "email": "angorak@seznam.cz"
+    }],
+    "require": {}
+}
