@@ -2,6 +2,8 @@
 
 namespace main;
 
+use Hosek\Boss;
+use Hosek\Minion;
 use Hosek\MyClass;
 use Hosek\MyShopProduct;
 use Hosek\ShopProduct;
@@ -40,3 +42,11 @@ function getClassSource(\ReflectionClass $class): string
     $len = $to - $from + 1;
     return implode(array_slice($lines, $from - 1, $len));
 }
+
+print(PHP_EOL);
+
+$boss = new Boss();
+$boss->addEmployee(new Minion('Mary'));
+$boss->addEmployee(new Minion('John'));
+$boss->projectFails();
+$boss->projectFails();
