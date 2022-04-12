@@ -2,6 +2,11 @@
 
 namespace main;
 
+use Hosek\App\Decorator\FilterRequest;
+use Hosek\App\Decorator\LogRequest;
+use Hosek\App\Decorator\MainProcess;
+use Hosek\App\Decorator\RequestHelper;
+use Hosek\App\MessageProvider;
 use Hosek\Boss;
 use Hosek\Minion;
 use Hosek\MyClass;
@@ -50,3 +55,22 @@ $boss->addEmployee(new Minion('Mary'));
 $boss->addEmployee(new Minion('John'));
 $boss->projectFails();
 $boss->projectFails();
+
+$msg = new MessageProvider('Ahoj');
+$msg->printMessage();
+
+$pr = new FilterRequest(new LogRequest(new MainProcess()));
+$pr->process(new RequestHelper());
+
+function genTest()
+{
+    yield 1;
+    yield 'a';
+}
+
+$g = genTest();
+
+$range = range(1, 5);
+print_r($range);
+
+list($aa, $bb) = [1, 2];
