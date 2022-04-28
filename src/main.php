@@ -80,3 +80,4 @@ foreach ($g as $item) {
 }
 
 // added second text
+// tagged 1.0.0
