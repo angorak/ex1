@@ -68,9 +68,13 @@ function genTest()
     yield 'a';
 }
 
-$g = genTest();
-
 $range = range(1, 5);
 print_r($range);
 
 list($aa, $bb) = [1, 2];
+
+$g = genTest();
+
+foreach ($g as $item) {
+    print($item);
+}
