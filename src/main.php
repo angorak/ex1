@@ -78,3 +78,5 @@ $g = genTest();
 foreach ($g as $item) {
     print($item);
 }
+
+// added second text
